@@ -6,7 +6,7 @@ export default function Contacts({ myContacts }) {
       <Image style={styles.photos} source={myContacts.photo} />
       <View style={styles.contactsText}>
         <Text style={styles.text} numberOfLines={1} ellipsizeMode={"tail"}>{myContacts.name}</Text>
-        <Text style={styles.numbers}>{myContacts.contact}</Text>
+        <Text style={styles.numbers} dataDetectorType="phoneNumber" selectable={true} selectionColor={"#fbf8cc"}>{myContacts.contact}</Text>
       </View>
     </View>
   )
