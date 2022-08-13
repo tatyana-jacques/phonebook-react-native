@@ -8,6 +8,7 @@ import siouxie from "./assets/siouxie.jpeg"
 import kathleen from "./assets/kathleen.jpeg"
 import sophie from "./assets/sophie.jpeg"
 import cecile from "./assets/cecile.jpeg"
+import hisaishi from "./assets/hisaishi.jpeg"
 
 
 export default function App() {
@@ -69,10 +70,10 @@ export default function App() {
     },
 
     {
-      id: 6,
-      name: "Siouxie Sioux Susan Janet Ballion",
-      contact: "44 44444-4444",
-      photo: siouxie
+      id: 9,
+      name: "Joe Hisaishi Mamoru Fujisawa",
+      contact: "88 88888-8888",
+      photo: hisaishi
     },
 
   ]
