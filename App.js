@@ -1,83 +1,97 @@
-import { SafeAreaView, StatusBar, StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { SafeAreaView, StatusBar, StyleSheet, Text, View, Image, ScrollView } from "react-native"
+import Contacts from "./Contato"
 import kim from "./assets/kim.jpeg"
 import thurston from "./assets/thurston.jpeg"
 import rita from "./assets/rita.jpeg"
 import smith from "./assets/smith.jpeg"
+import siouxie from "./assets/siouxie.jpeg"
+import kathleen from "./assets/kathleen.jpeg"
+import sophie from "./assets/sophie.jpeg"
+import cecile from "./assets/cecile.jpeg"
+
 
 export default function App() {
 
-const myContacts = [
-  {
-    id: 1,
-    name: "Kim Gordom",
-    contact: "11 11111-1111",
-    photo: kim
-  },
+  const myContacts = [
+    {
+      id: 1,
+      name: "Kim Gordom",
+      contact: "00 00000-0000",
+      photo: kim
+    },
 
-  {
-    id: 2,
-    name: "Thurston More",
-    contact: "22 22222-2222",
-    photo: thurston
-  },
+    {
+      id: 2,
+      name: "Thurston More",
+      contact: "11 11111-1111",
+      photo: thurston
+    },
 
-  {
-    id: 3,
-    name: "Rita Lee",
-    contact: "33 33333-3333",
-    photo: rita
-  },
+    {
+      id: 3,
+      name: "Rita Lee",
+      contact: "22 22222-2222",
+      photo: rita
+    },
 
-  {
-    id: 4,
-    name: "Robet Smith",
-    contact: "22 22222-2222",
-    photo: smith
-  },
+    {
+      id: 4,
+      name: "Robet Smith",
+      contact: "33 33333-3333",
+      photo: smith
+    },
 
-  {
-    id: 5,
-    name: "Thurston Moretttttttttttttttttttttttttttttttttttttttttttt",
-    contact: "22 22222-2222",
-    photo: thurston
-  },
+    {
+      id: 5,
+      name: "Siouxie Sioux Susan Janet Ballion",
+      contact: "44 44444-4444",
+      photo: siouxie
+    },
+    {
+      id: 6,
+      name: "Kathleen Edwards",
+      contact: "55 55555-5555",
+      photo: kathleen
+    },
+
+    {
+      id: 7,
+      name: "La Grande Sophie Hurriaux",
+      contact: "66 66666-6666",
+      photo: sophie
+    },
+
+    {
+      id: 8,
+      name: "Cécile Corbel",
+      contact: "77 77777-7777",
+      photo: cecile
+    },
+
+    {
+      id: 6,
+      name: "Siouxie Sioux Susan Janet Ballion",
+      contact: "44 44444-4444",
+      photo: siouxie
+    },
+
+  ]
 
 
-
-]
 
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={"#0f4c5c"} />
       <ScrollView showVerticalScrollIndicator={false}>
-      <Text style = {styles.title}>Meus contatos</Text>
-        
-        {myContacts.map ((myContacts)=>(
-            <View style = {styles.contacts}>
-            <Image style = {styles.photos} source = {myContacts.photo}/>
-            <View style = {styles.contactsText}>
-            <Text style = {styles.text} numberOfLines = {1} ellipsizeMode = {"tail"}>{myContacts.name}</Text>
-            <Text style = {styles.numbers}>{myContacts.contact}</Text>
-            </View>
-          </View>
-          ))
+        <Text style={styles.title}>Meus contatos</Text>
+
+
+        {
+          myContacts.map((myContacts) => (<Contacts myContacts={myContacts} />))
         }
 
-
-
-    
-      
-     
-
-     
-
-     
-
-     
-
-    
       </ScrollView>
-      
+
     </SafeAreaView>
   )
 }
@@ -97,44 +111,4 @@ const styles = StyleSheet.create({
 
   },
 
-  contacts: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: "1%", 
-    marginBottom: "1%",
-    marginRight: "5%",
-    marginLeft: "5%",
-    backgroundColor:"#caf0f8" ,
-    padding: "2%",
-    borderRadius: 15,
-    borderColor: "#0f4c5c",
-    borderStyle: "solid",
-    borderWidth: 2,
-    width: "90%",
-    
-  },
-
-  photos: {
-    width: 50,
-    height: 50,
-    borderRadius: 50,
-  },
-
-  contactsText: {
-    flexDirection: "column",
-    marginLeft:"10%",
-    width:"70%",
-  },
-
-  text: {
-    fontSize: 20,
-    color: "#0f4c5c",
-    fontWeight: "bold"
-
-  },
-  numbers: {
-    fontSize: 20,
-    color: "#0f4c5c",
-
-  }
 })
