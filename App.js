@@ -9,6 +9,8 @@ import kathleen from "./assets/kathleen.jpeg"
 import sophie from "./assets/sophie.jpeg"
 import cecile from "./assets/cecile.jpeg"
 import hisaishi from "./assets/hisaishi.jpeg"
+import pirate from "./assets/pirate.jpeg"
+
 
 
 export default function App() {
@@ -74,6 +76,13 @@ export default function App() {
       name: "Joe Hisaishi Mamoru Fujisawa",
       contact: "88 88888-8888",
       photo: hisaishi
+    },
+
+    {
+      id: 10,
+      name: "Béatrice Martin Coer de Pirate",
+      contact: "99 99999-9999",
+      photo: pirate
     },
 
   ]
