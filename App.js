@@ -93,11 +93,11 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={"#0f4c5c"} />
       <ScrollView showVerticalScrollIndicator={false}>
-        <Text style={styles.title}>Meus contatos</Text>
+        <Text style={styles.title}>My contacts</Text>
 
 
         {
-          myContacts.map((myContacts) => (<Contacts myContacts={myContacts} />))
+          myContacts.map((myContacts) => (<Contacts myContacts={myContacts} key={myContacts.id} />))
         }
 
       </ScrollView>
